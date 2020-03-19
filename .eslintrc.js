@@ -20,7 +20,9 @@ module.exports = {
   },
   plugins: [
     'react',
+    'babel'
   ],
   rules: {
+    'react/jsx-filename-extension': [0]
   },
 };

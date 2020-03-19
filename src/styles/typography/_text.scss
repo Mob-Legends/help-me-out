@@ -1,0 +1,57 @@
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  @include font-size-to-rem($base-font-size);
+
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+  color: $text-colour;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-unit;
+}
+
+a {
+  color: map-get($colours, highlight);
+}
+
+li {
+  list-style-type: none;
+}
+
+.highlight {
+  color: $highlight-color;
+}
+
+@each $name, $properties in $text {
+
+  .#{$name} {
+    @include font($name, small);
+
+    @include mq($from: medium) {
+      @include font($name, large);
+    }
+  }
+}
