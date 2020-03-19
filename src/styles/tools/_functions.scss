@@ -1,0 +1,20 @@
+// @author Hugo Giraudel
+// https://css-tricks.com/snippets/sass/deep-getset-maps/
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function font-size($key, $size:large) {
+  @return map-deep-get($text, $key, $size, font-size);
+}
+
+@function line-height($key, $size:large) {
+  @return map-deep-get($text, $key, $size, line-height);
+}
+
+// @function font-weight($key, $size) {
+//   @return map-deep-get($text, $key, $size, font-weight);
+// }

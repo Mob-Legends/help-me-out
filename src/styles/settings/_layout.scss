@@ -1,0 +1,11 @@
+$container-width: 2000px;
+$spacing-unit: 1rem;
+$spacing-unit-small: $spacing-unit / 2;
+$spacing-unit-large: $spacing-unit * 2;
+
+$mq-breakpoints: (
+  small: 320px,
+  medium: 740px,
+  large: 980px,
+  wide: 1500px
+);

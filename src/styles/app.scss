@@ -1,0 +1,19 @@
+@import 'sass-mq';
+@import 'settings/all';
+@import 'tools/all';
+@import 'typography/all';
+@import 'layout/all';
+@import 'components/all';
+@import 'motion/animation';
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: $base-font-size;
+  background-color: map-get($colours, background);
+  background-size: 100%;
+}

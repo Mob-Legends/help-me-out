@@ -1,0 +1,16 @@
+@mixin font-size-to-rem($value) {
+  @if unit($value) !='px' {
+    @warn 'Value must be a px unit';
+  }
+
+  font-size: $value;
+  font-size: ($value / $base-font-size) * 1rem;
+}
+
+@mixin font($key, $size:large) {
+  $font-size: font-size($key, $size);
+
+  @include font-size-to-rem($font-size);
+
+  line-height: line-height($key, $size);
+}
