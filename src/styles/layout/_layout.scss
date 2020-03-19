@@ -11,7 +11,7 @@
 .block {
   padding: $spacing-unit;
 
-  @include mq($from: medium) {
+  @media screen and (min-width(map-get($mq-breakpoints, medium))) {
     padding: $spacing-unit-large;
   }
 }
