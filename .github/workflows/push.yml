@@ -1,0 +1,20 @@
+on:
+  push:
+    paths:
+      - yarn.lock
+name: Build Cache
+jobs:
+  build_cache:
+    name: Build Cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: check cache
+        id: npm-cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock')}}
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: yarn
