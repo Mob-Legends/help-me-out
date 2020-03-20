@@ -1,7 +1,4 @@
-on:
-  push:
-    paths:
-      - yarn.lock
+on: push
 name: Build Cache
 jobs:
   build_cache:
