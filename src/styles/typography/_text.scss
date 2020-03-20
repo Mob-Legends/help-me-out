@@ -50,7 +50,7 @@ li {
   .#{$name} {
     @include font($name, small);
 
-    @include mq($from: medium) {
+    @media screen and (min-width(map-get($mq-breakpoints, medium))) {
       @include font($name, large);
     }
   }
