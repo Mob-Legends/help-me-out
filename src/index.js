@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/app.scss';
 import * as Sentry from '@sentry/browser';
-import App from './components/app/App';
+import { App } from './components/app/App';
 import * as serviceWorker from './serviceWorker';
 
 Sentry.init({
