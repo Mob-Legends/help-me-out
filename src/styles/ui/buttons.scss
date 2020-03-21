@@ -1,0 +1,15 @@
+$button-background: map-get($colours, highlight);
+$button-text-colour: #fff;
+
+.button {
+  background-color: $button-background;
+  color: $button-text-colour;
+  padding: $spacing-unit-small $spacing-unit;
+  border: none;
+  border-radius: $button-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($button-background, 10);
+  }
+}
