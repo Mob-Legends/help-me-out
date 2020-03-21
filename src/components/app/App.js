@@ -1,13 +1,13 @@
 import React from 'react';
+import { Header } from '../header/Header';
+import { Footer } from '../footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Hello world
-        </p>
-      </header>
+    <div className="app-wrapper">
+      <Header />
+        <p>Hello World!</p>
+      <Footer />
     </div>
   );
 }
