@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
 import './styles/app.scss';
 import * as Sentry from '@sentry/browser';
 import { App } from './components/app/App';
