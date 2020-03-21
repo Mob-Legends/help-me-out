@@ -28,6 +28,8 @@
   ],
   "rules": {
     "react/jsx-filename-extension": [0],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "comma-dangle": ["error", "never"],
+    "arrow-parens": ["error", "never"]
   }
 }
