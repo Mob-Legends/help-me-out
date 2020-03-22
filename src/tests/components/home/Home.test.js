@@ -1,7 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { MockedProvider } from '@apollo/react-testing';
-import wait from 'waait';
 import { Home, EXAMPLE_QUERY } from '../../../components/home/Home';
 
 describe('Home', () => {
@@ -37,7 +36,9 @@ describe('Home', () => {
     const { getByText } = render(<MockedProvider mocks={mocks} addTypename={false}>
       <Home />
     </MockedProvider>);
-    await wait();
-    expect(getByText('AED: 3.673')).toBeInTheDocument();
+
+      await waitFor(() =>
+    expect(getByText('AED: 3.673')).toBeInTheDocument()
+      )
   });
 });
