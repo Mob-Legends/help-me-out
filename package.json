@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
-    "ci-test": "CI=true react-scripts test",
+    "ci-test": "CI=true react-scripts test --env=jest-environment-jsdom-sixteen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
