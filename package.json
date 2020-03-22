@@ -23,10 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "ci-test": "CI=true react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext js,jsx ./src",
+    "lint-fix": "yarn lint --fix"
   },
   "browserslist": {
     "production": [
