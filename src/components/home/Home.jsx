@@ -1,26 +1,30 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-export const Home = () => (
-  <Query
-    query={gql`
-    {
-      rates(currency: "USD") {
-        currency
-        rate
-      }
+export const EXAMPLE_QUERY = gql`
+  {
+    rates(currency: "USD") {
+      currency
+      rate
     }
-  `}>
-  {({loading, error, data}) => {
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+  }
+`;
 
-    return data.rates.map(({ currency, rate }) => (
-      <div key={currency}>
-        <p>{currency}: {rate}</p>
-      </div>
-    ));
-  }}
-  </Query>
-)
+export const Home = () => {
+  const { loading, error, data } = useQuery(EXAMPLE_QUERY, {  variables: {} });
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error :(</p>;
+  }
+
+  return data.rates.map(({ currency, rate }) => (
+    <div key={currency}>
+      <p>{currency}: {rate}</p>
+    </div>
+  ));
+};
