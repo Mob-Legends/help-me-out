@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import 'normalize.css';
 import './styles/app.scss';
 import * as Sentry from '@sentry/browser';
@@ -10,7 +10,7 @@ Sentry.init({
   dsn: process.env.REACT_APP_SENTRY,
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
