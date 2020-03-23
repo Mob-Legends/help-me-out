@@ -4,7 +4,7 @@
 
 | When will it run?                                                              | What does it do?  |
 | ------------------------------------------------------------------------------ | ----------------- |
-| When a PR is created or updated, e.g. via a commit being pushed to the branch. | It will execute the tests - using various Node versions as the environment it will be deployed to is, as yet, unknown. |
+| When a PR is created or updated, e.g. via a commit being pushed to the branch. | It will run eslint, then execute the tests - using various Node versions as the environment it will be deployed to is, as yet, unknown. |
 
 ## Push
 
