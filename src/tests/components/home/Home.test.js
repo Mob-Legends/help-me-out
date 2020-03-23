@@ -20,25 +20,27 @@ describe('Home', () => {
               rate: '3.673'
             }
           ]
-        },
-      },
+        }
+      }
     }
   ];
 
   it('renders the loading state initially', () => {
-    const { getByText } = render(<MockedProvider mocks={mocks} addTypename={false}>
-      <Home />
-    </MockedProvider>);
+    const { getByText } = render(
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <Home />
+      </MockedProvider>
+    );
     expect(getByText('Loading...')).toBeInTheDocument();
   });
 
   it('should render the result', async () => {
-    const { getByText } = render(<MockedProvider mocks={mocks} addTypename={false}>
-      <Home />
-    </MockedProvider>);
+    const { getByText } = render(
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <Home />
+      </MockedProvider>
+    );
 
-      await waitFor(() =>
-    expect(getByText('AED: 3.673')).toBeInTheDocument()
-      )
+    await waitFor(() => expect(getByText('AED: 3.673')).toBeInTheDocument());
   });
 });
