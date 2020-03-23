@@ -5,11 +5,11 @@
     "jest/globals": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "react-app",
     "airbnb",
     "plugin:jsx-a11y/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "prettier/react"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -23,12 +23,12 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
-    "babel",
     "jsx-a11y",
+    "prettier",
     "jest"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-filename-extension": [0],
     "import/prefer-default-export": "off"
   }

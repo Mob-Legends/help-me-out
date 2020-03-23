@@ -7,7 +7,7 @@ import { App } from './components/app/App';
 import * as serviceWorker from './serviceWorker';
 
 Sentry.init({
-  dsn: process.env.REACT_APP_SENTRY,
+  dsn: process.env.REACT_APP_SENTRY
 });
 
 render(<App />, document.getElementById('root'));

@@ -12,7 +12,9 @@ export const EXAMPLE_QUERY = gql`
 `;
 
 export const Home = () => {
-  const { loading, error, data } = useQuery(EXAMPLE_QUERY, {  variables: { currency: 'USD' } });
+  const { loading, error, data } = useQuery(EXAMPLE_QUERY, {
+    variables: { currency: 'USD' }
+  });
 
   if (loading) {
     return <p>Loading...</p>;
@@ -24,7 +26,9 @@ export const Home = () => {
 
   return data.rates.map(({ currency, rate }) => (
     <div key={currency}>
-      <p>{currency}: {rate}</p>
+      <p>
+        {currency}: {rate}
+      </p>
     </div>
   ));
 };
