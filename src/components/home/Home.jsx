@@ -11,7 +11,7 @@ export const EXAMPLE_QUERY = gql`
   }
 `;
 
-export const Home = (deliberateLintFailure) => {
+export const Home = () => {
   const { loading, error, data } = useQuery(EXAMPLE_QUERY, {
     variables: { currency: 'USD' }
   });
