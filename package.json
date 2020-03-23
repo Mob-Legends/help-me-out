@@ -23,12 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jest-environment-jsdom-sixteen",
     "ci-test": "CI=true react-scripts test --env=jest-environment-jsdom-sixteen",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app",
     "lint": "eslint --ext js,jsx ./src",
-    "lint-fix": "yarn lint --fix"
+    "lint-fix": "yarn lint --fix",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
