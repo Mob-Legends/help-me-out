@@ -8,7 +8,7 @@ import { Home } from '../home/Home';
 
 // uri needs changing to the real thing when we're ready
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io'
+  uri: process.env.REACT_APP_APOLLO_SERVER_URI
 });
 
 export const App = () => (
